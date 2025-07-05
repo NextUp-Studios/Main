@@ -55,37 +55,33 @@ nav a:hover {
 }
 
 main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  padding: 0;
+}
+
+section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: left;
 }
 
 h2 {
-  color: var(--accent);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-top: 2rem;
 }
 
 p {
-  max-width: 600px;
-  line-height: 1.6;
-}
-
-.card {
-  background: var(--card-bg);
-  padding: 1.5rem 2rem;
-  margin: 1rem;
-  border: 1px solid var(--border-color);
-  border-radius: 1rem;
-  box-shadow: 0 8px 20px var(--shadow-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px var(--shadow-color);
+  font-size: 1.125rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-bottom: 2rem;
 }
 
 button {
@@ -100,9 +96,25 @@ button {
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
+button {
+  background: none;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  box-shadow: none;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
 button:hover {
-    background: var(--accent-light);
-    box-shadow: 0 4px 12px var(--shadow-color);
+  background: var(--accent);
+  color: white;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  text-align: left;
 }
 
 a {
@@ -119,4 +131,16 @@ footer {
   box-shadow: 0 -4px 10px var(--shadow-color);
   font-size: 0.9rem;
   color: var(--accent-light);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.features div {
+  background: none;
+  padding: 0;
+  border: none;
 }

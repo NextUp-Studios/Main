@@ -1,0 +1,122 @@
+:root {
+  --bg-color: #0d1a16;            /* forest midnight */
+  --header-footer-bg: #162924;    /* dark moss */
+  --card-bg: #1c352d;             /* deep verdant stone */
+  --text-color: #e3f8e5;          /* soft mint fog */
+  --accent: #7acb80;              /* fresh emerald light */
+  --accent-light: #a3f7b5;        /* bright mint flourish */
+  --border-color: #2e4a3e;        /* dark lichen edge */
+  --shadow-color: rgba(122, 203, 128, 0.3); /* glowing leaflight */
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: var(--header-footer-bg);
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--accent);
+  text-shadow: 0 0 12px var(--shadow-color), 0 0 24px var(--accent);
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--accent-light);
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: white;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+h2 {
+  color: var(--accent);
+}
+
+p {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1.5rem 2rem;
+  margin: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px var(--shadow-color);
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--accent);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: var(--accent-light);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+a {
+  color: var(--accent-light);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  border-top: 1px solid var(--border-color);
+  box-shadow: 0 -4px 10px var(--shadow-color);
+  font-size: 0.9rem;
+  color: var(--accent-light);
+}
